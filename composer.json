@@ -39,7 +39,10 @@
         "jeffersongoncalves/filament-commerce-promotion": "self.version",
         "jeffersongoncalves/filament-commerce-loyalty": "self.version",
         "jeffersongoncalves/filament-commerce-store-credit": "self.version",
-        "jeffersongoncalves/filament-commerce-translation": "self.version"
+        "jeffersongoncalves/filament-commerce-translation": "self.version",
+        "jeffersongoncalves/laravel-commerce-customer": "^1.0",
+        "jeffersongoncalves/laravel-commerce-order": "^1.0",
+        "jeffersongoncalves/laravel-commerce-product": "^1.0"
     },
     "require-dev": {
         "larastan/larastan": "^3.0",
