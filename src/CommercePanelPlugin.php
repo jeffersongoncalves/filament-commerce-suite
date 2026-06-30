@@ -24,6 +24,7 @@ use JeffersonGoncalves\FilamentCommerce\Store\CommerceStorePlugin;
 use JeffersonGoncalves\FilamentCommerce\StoreCredit\CommerceStoreCreditPlugin;
 use JeffersonGoncalves\FilamentCommerce\Tax\CommerceTaxPlugin;
 use JeffersonGoncalves\FilamentCommerce\Translation\CommerceTranslationPlugin;
+use JeffersonGoncalves\FilamentCommerce\Umbrella\Widgets\CommerceStatsWidget;
 use JeffersonGoncalves\FilamentCommerce\User\CommerceUserPlugin;
 
 /**
@@ -61,6 +62,10 @@ class CommercePanelPlugin implements Plugin
             CommerceLoyaltyPlugin::make(),
             CommerceStoreCreditPlugin::make(),
             CommerceTranslationPlugin::make(),
+        ]);
+
+        $panel->widgets([
+            CommerceStatsWidget::class,
         ]);
     }
 
