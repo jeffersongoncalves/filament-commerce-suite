@@ -1,0 +1,90 @@
+{
+    "name": "jeffersongoncalves/filament-commerce",
+    "description": "Filament Commerce — a Medusa-style commerce admin panel for Laravel, built on Filament v5. Installs every commerce module plugin via the CommercePanelPlugin.",
+    "keywords": [
+        "laravel",
+        "filament",
+        "filament-plugin",
+        "commerce",
+        "medusa",
+        "ecommerce"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jefferson Gonçalves",
+            "email": "gerson.simao.92@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^5.3",
+        "jeffersongoncalves/filament-commerce-core": "self.version",
+        "jeffersongoncalves/filament-commerce-currency": "self.version",
+        "jeffersongoncalves/filament-commerce-store": "self.version",
+        "jeffersongoncalves/filament-commerce-sales-channel": "self.version",
+        "jeffersongoncalves/filament-commerce-region": "self.version",
+        "jeffersongoncalves/filament-commerce-stock-location": "self.version",
+        "jeffersongoncalves/filament-commerce-api-key": "self.version",
+        "jeffersongoncalves/filament-commerce-user": "self.version",
+        "jeffersongoncalves/filament-commerce-auth": "self.version",
+        "jeffersongoncalves/filament-commerce-product": "self.version",
+        "jeffersongoncalves/filament-commerce-pricing": "self.version",
+        "jeffersongoncalves/filament-commerce-inventory": "self.version",
+        "jeffersongoncalves/filament-commerce-customer": "self.version",
+        "jeffersongoncalves/filament-commerce-cart": "self.version",
+        "jeffersongoncalves/filament-commerce-order": "self.version",
+        "jeffersongoncalves/filament-commerce-payment": "self.version",
+        "jeffersongoncalves/filament-commerce-fulfillment": "self.version",
+        "jeffersongoncalves/filament-commerce-tax": "self.version",
+        "jeffersongoncalves/filament-commerce-promotion": "self.version",
+        "jeffersongoncalves/filament-commerce-loyalty": "self.version",
+        "jeffersongoncalves/filament-commerce-store-credit": "self.version",
+        "jeffersongoncalves/filament-commerce-translation": "self.version",
+        "spatie/laravel-package-tools": "^1.14.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeffersonGoncalves\\FilamentCommerce\\Umbrella\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JeffersonGoncalves\\FilamentCommerce\\Umbrella\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint",
+        "test": "vendor/bin/pest"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeffersonGoncalves\\FilamentCommerce\\Umbrella\\FilamentCommerceServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "homepage": "https://github.com/jeffersongoncalves/filament-commerce",
+    "support": {
+        "issues": "https://github.com/jeffersongoncalves/filament-commerce/issues",
+        "source": "https://github.com/jeffersongoncalves/filament-commerce"
+    }
+}
